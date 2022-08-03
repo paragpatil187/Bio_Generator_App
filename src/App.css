@@ -2,9 +2,31 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  height: 900px;
+  width: 98%;
+  border: 1px solid black;
+  margin: auto;
+  gap: 20px;
+}
+
+.education {
+  display: flex;
+  width: 98%;
+  justify-content: center;
+  align-items: center;
+}
+.option {
+  height: 900px;
+  width: 50%;
+  border: 1px solid red;
+}
+
+.result {
+  height: 900px;
+  width: 50%;
+  border: 1px solid red;
 }
 
 @media (prefers-reduced-motion: no-preference) {
