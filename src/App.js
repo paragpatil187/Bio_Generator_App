@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+       
       <h1>Bio - Generator</h1>
       <div className="container">
         <div className="option">
@@ -56,6 +57,17 @@ function App() {
             onChange={handleInputLocation}
           />
           <br />
+          <h3>birth date</h3>
+            <input
+              type="date"
+              
+              
+            />
+            <br/>
+            <h3>profile image</h3>
+            <input type="file"/>
+          </div>
+          <br/>
           <div className="education">
             <br />
             <h3>School</h3>
@@ -64,18 +76,8 @@ function App() {
               placeholder="Enter School/Institute Name"
               onChange={handleInputSchool}
             />
-            <h3>Specialization</h3>
-            <input
-              type="text"
-              placeholder="Enter Specialization"
-              onChange={handleInputStream}
-            />
-             <h3>birth date</h3>
-            <input
-              type="date"
-              
-              
-            />
+            
+             
              <h3>Specialization</h3>
             <input
               type="text"
@@ -83,9 +85,7 @@ function App() {
               onChange={handleInputStream}
             />
             <br/>
-            <h3>profile image</h3>
-            <input type="text" placeholder="select file"/>
-          </div>
+            
         </div>
         <div className="result">
           <h2>Results</h2>
