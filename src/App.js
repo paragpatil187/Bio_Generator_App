@@ -34,8 +34,17 @@ function App() {
       <h1>Bio - Generator</h1>
       <div className="container">
         <div className="option">
+
           
           <h2>Options</h2>
+          <div>
+            <input type="checkbox">
+             </input>
+            <label>Profile photo</label>
+          <input type="file"></input>
+          </div>
+
+          
           <div className="box">
           <h3>Name</h3>
           <input
@@ -43,7 +52,7 @@ function App() {
             placeholder="Enter name"
             onChange={handleInputName}
           />
-          <h3>Gender</h3>
+          <label>Gender</label>
           <select
           >
             <option value="male">Male</option>
