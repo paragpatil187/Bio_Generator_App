@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: aqua;
+  
 }
 
 .container {
@@ -58,4 +58,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.box{
+  background-color: #E0EBE4;
+}
+.heading{
+  background-color: #E0EBE4;
 }

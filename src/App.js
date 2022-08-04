@@ -31,13 +31,13 @@ function App() {
   return (
     <div className="App">
        
-      <h1>Bio - Generator</h1>
+      <h1 className="heading">Bio - Generator</h1>
       <div className="container">
         <div className="option">
 
           
-          <h2>Options</h2>
-          <div>
+          <h2 className="box">Options</h2>
+          <div className="box">
             <input type="checkbox">
              </input>
             <label>Profile photo</label>
@@ -46,7 +46,7 @@ function App() {
 
           
           <div className="box">
-          <h3>Name</h3>
+          <label>Name</label>
           <input
             type="text"
             placeholder="Enter name"
@@ -122,8 +122,8 @@ function App() {
             
         
         <div className="result">
-          <h2>Result</h2>
-          <div>
+          <h2 className="box">Result</h2>
+          <div className="box">
             {name} age {age} is from the {location}. He is studying {stream} at {school}.
           </div>
 
