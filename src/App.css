@@ -1,15 +1,15 @@
 .App {
   text-align: center;
+  margin:1rem;
   
 }
 
 .container {
   display: flex;
-  height: 900px;
-  width: 98%;
-  border: 1px solid black;
+  width: 100%;
   margin: auto;
-  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .education {
@@ -19,8 +19,8 @@
   align-items: center;
 }
 .option {
-  height: 900px;
-  width: 50%;
+  max-width: 600px;
+  margin: 1rem;
   border: 1px solid red;
 }
 
@@ -61,7 +61,13 @@
 }
 .box{
   background-color: #E0EBE4;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #2223;
 }
 .heading{
   background-color: #E0EBE4;
+  margin-bottom: 1rem;
+  color: #222;
+  margin: 0;
 }

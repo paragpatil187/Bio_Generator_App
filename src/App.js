@@ -124,7 +124,7 @@ function App() {
         <div className="result">
           <h2 className="box">Result</h2>
           <div className="box">
-            {name} age {age} is from the {location}. He is studying {stream} at {school}.
+            {name}  is from the {location}. He is studying {stream} at {school}.
           </div>
 
           
