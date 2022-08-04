@@ -8,7 +8,9 @@ function App() {
   const [stream, setStream] = useState("");
   const [school, setSchool] = useState("");
   const[age,setAge]=useState("")
-
+  const[occupation,setOccupation]=useState("");
+  const[religion,setReligion]=useState("")
+  const[meeting,setMeeting]=useState("")
   const handleInputName = (e) => {
     setName(e.target.value);
   };
@@ -26,6 +28,15 @@ function App() {
   };
   const handleInputAge=(e)=>{
     setSelectionRange(e.target.value)
+  }
+  const handleOccupation=(e)=>{
+    setOccupation(e.target.value)
+  }
+  const handleReligion=(e)=>{
+    setReligion(e.target.value)
+  }
+  const handleMeeting=(e)=>{
+    setMeeting(e.target.value)
   }
 
   return (
@@ -83,7 +94,7 @@ function App() {
           <div className="box">
           <input type="checkbox"></input>
             <label>Occupation</label>
-            <input type="text"></input>
+            <input type="text" onChange={handleOccupation}></input>
             <button>Random Occupation</button>
             
 
@@ -91,15 +102,15 @@ function App() {
           <div className="box">
           <input type="checkbox"></input>
             <label>Religious background</label>
-            <textarea rows="5" cols="20"></textarea>
+            <textarea rows="5" cols="20" onChange={handleReligion}></textarea>
             <button>Random religion</button>
             
 
           </div>
           <div className="box">
           <input type="checkbox"></input>
-            <label>Reason for meeting</label>
-            <textarea rows="5" cols="20"></textarea>
+            <label>meeting reason</label>
+            <textarea rows="5" cols="20" onChange={handleMeeting}></textarea>
             <button>For peace</button>
             <button>For personal reason</button>
             <button>For prayer</button>
@@ -124,7 +135,9 @@ function App() {
         <div className="result">
           <h2 className="box">Result</h2>
           <div className="box">
-            {name}  is from the {location}. He is studying {stream} at {school}.
+            {name}  is from the {location}. He is studying {stream} at {school}.his occupation is {occupation}
+            his religion is {religion} He meet you for {meeting}
+
           </div>
 
           
