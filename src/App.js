@@ -10,7 +10,8 @@ function App() {
   const[age,setAge]=useState("")
   const[occupation,setOccupation]=useState("");
   const[religion,setReligion]=useState("")
-  const[meeting,setMeeting]=useState("")
+  const[meeting,setMeeting]=useState("");
+  const[image,setimage]=useState("")
   const handleInputName = (e) => {
     setName(e.target.value);
   };
@@ -38,6 +39,20 @@ function App() {
   const handleMeeting=(e)=>{
     setMeeting(e.target.value)
   }
+  const photoUpload=(e)=>{
+  const reader=new FileReader()
+  const file = e.target.files[0];
+  reader.onloadend = () => {
+    setimage(reader.result)
+    this.setState({
+      file: file,
+      imagePreviewUrl: reader.result
+    });
+  }
+  reader.readAsDataURL(file);
+}
+
+
 
   return (
     <div className="App">
@@ -52,7 +67,7 @@ function App() {
             <input type="checkbox">
              </input>
             <label>Profile photo</label>
-          <input type="file"></input>
+          <input type="file" onChange={photoUpload}></input>
           </div>
 
           
@@ -134,6 +149,10 @@ function App() {
         
         <div className="result">
           <h2 className="box">Result</h2>
+          <div className="imagediv">
+          <img src={image} />
+          </div>
+          
           <div className="box">
             {name}  is from the {location}. He is studying {stream} at {school}.his occupation is {occupation}
             his religion is {religion} He meet you for {meeting}
