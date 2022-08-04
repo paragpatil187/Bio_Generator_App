@@ -35,69 +35,90 @@ function App() {
       <div className="container">
         <div className="option">
           
-          <h2>Form</h2>
+          <h2>Options</h2>
+          <div className="box">
           <h3>Name</h3>
           <input
             type="text"
             placeholder="Enter name"
             onChange={handleInputName}
           />
-          <h3>Age</h3>
-          <input
-            type="Number"
-            placeholder="Enter Age"
-            onChange={handleInputAge}
-          />
+          <h3>Gender</h3>
+          <select
+          >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <button>Random name</button>
 
-          <br />
-          <h3>Location</h3>
-          <input
-            type="text"
-            placeholder="Enter location"
-            onChange={handleInputLocation}
-          />
-          <br />
-          <h3>birth date</h3>
-            <input
-              type="date"
-              
-              
-            />
-            <br/>
-            <h3>profile image</h3>
-            <input type="file"/>
           </div>
-          <br/>
-          <div className="education">
-            <br />
-            <h3>School</h3>
-            <input
-              type="text"
-              placeholder="Enter School/Institute Name"
-              onChange={handleInputSchool}
-            />
+          <div className="box">
+          <input type="checkbox"></input>
+            <label>Location</label>
+            <input type="text" onChange={handleInputLocation}></input>
+            <button>Random Location</button>
+            
+
+          </div>
+          <div className="box">
+          <input type="checkbox"></input>
+            <label>School</label>
+            <input type="text" onChange={handleInputSchool}></input>
+            <button>Random School</button>
+            <label>Specialization</label>
+            <input type="text" onChange={handleInputStream}></input>
+            <button>Random Specialization</button>
+            
+
+          </div>
+          <div className="box">
+          <input type="checkbox"></input>
+            <label>Occupation</label>
+            <input type="text"></input>
+            <button>Random Occupation</button>
+            
+
+          </div>
+          <div className="box">
+          <input type="checkbox"></input>
+            <label>Religious background</label>
+            <textarea rows="5" cols="20"></textarea>
+            <button>Random religion</button>
+            
+
+          </div>
+          <div className="box">
+          <input type="checkbox"></input>
+            <label>Reason for meeting</label>
+            <textarea rows="5" cols="20"></textarea>
+            <button>For peace</button>
+            <button>For personal reason</button>
+            <button>For prayer</button>
+            
+            
+
+          </div>
+          </div>
+          
+          
+          
+          
+          
+           
+          
+            
             
              
-             <h3>Specialization</h3>
-            <input
-              type="text"
-              placeholder="Enter Specialization"
-              onChange={handleInputStream}
-            />
-            <br/>
             
-        </div>
+            
+        
         <div className="result">
-          <h2>Results</h2>
-          <h3>
+          <h2>Result</h2>
+          <div>
             {name} age {age} is from the {location}. He is studying {stream} at {school}.
-          </h3>
+          </div>
 
-          <h3>more details</h3>
-          <h3>gender:</h3>
-          <h2>birthdate:</h2>
-          <h2>maragial staus:</h2>
-          <h3>education</h3>
+          
         </div>
       </div>
     </div>
