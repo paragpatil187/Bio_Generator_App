@@ -11,7 +11,8 @@ function App() {
   const[occupation,setOccupation]=useState("");
   const[religion,setReligion]=useState("")
   const[meeting,setMeeting]=useState("");
-  const[image,setimage]=useState("")
+  const[image,setimage]=useState("");
+  const [gender,setGender]=useState("true")
   const handleInputName = (e) => {
     setName(e.target.value);
   };
@@ -39,6 +40,10 @@ function App() {
   const handleMeeting=(e)=>{
     setMeeting(e.target.value)
   }
+  const handleGender=(e)=>{
+    setGender(e.value)
+  }
+  
   const photoUpload=(e)=>{
   const reader=new FileReader()
   const file = e.target.files[0];
@@ -51,7 +56,7 @@ function App() {
   }
   reader.readAsDataURL(file);
 }
-
+console.log(gender)
 
 
   return (
@@ -79,10 +84,10 @@ function App() {
             onChange={handleInputName}
           />
           <label>Gender</label>
-          <select
+          <select onChange={handleGender}
           >
-            <option value="male">Male</option>
-            <option value="female">Female</option>
+            <option value="true">Male</option>
+            <option value="false">Female</option>
           </select>
           <button>Random name</button>
 
@@ -150,11 +155,11 @@ function App() {
         <div className="result">
           <h2 className="box">Result</h2>
           <div className="imagediv">
-          <img src={image} />
+          {image?<img src={image} alt="profile photo" />:null}
           </div>
           
           <div className="box">
-            {name}  is from the {location}. He is studying {stream} at {school}.his occupation is {occupation}
+            {name}  is from the {location}.{{gender}? "He":"She"} is studying {stream} at {school}.his occupation is {occupation}
             his religion is {religion} He meet you for {meeting}
 
           </div>
