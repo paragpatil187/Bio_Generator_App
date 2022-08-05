@@ -1,5 +1,6 @@
 import { setSelectionRange } from "@testing-library/user-event/dist/utils";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios"
 import "./App.css";
 
 function App() {
@@ -12,7 +13,11 @@ function App() {
   const[religion,setReligion]=useState("")
   const[meeting,setMeeting]=useState("just conversation");
   const[image,setimage]=useState("");
-  const [gender,setGender]=useState("true")
+  const [gender,setGender]=useState("true");
+  const [to,setTo]=useState("");
+  const[from,setForm]=useState("");
+  const[output,setOutput]=useState("");
+  
   const handleInputName = (e) => {
     setName(e.target.value);
   };
@@ -44,6 +49,7 @@ function App() {
     setGender(e.value)
   }
   
+  
   const photoUpload=(e)=>{
   const reader=new FileReader()
   const file = e.target.files[0];
@@ -60,7 +66,7 @@ console.log(gender)
 
 
   return (
-    <div className="App">
+    <div className="App" id="app">
        
       <h1 className="heading">Bio - Generator</h1>
       <div className="container">
@@ -152,8 +158,10 @@ console.log(gender)
             
             
         
-        <div className="result">
+        <div className="result" id="result">
           <h2 className="box">Result</h2>
+         
+          
           <div className="imagediv">
           {image?<img src={image} alt="profile photo" />:null}
           </div>
