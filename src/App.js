@@ -48,6 +48,9 @@ function App() {
   const handleGender=(e)=>{
     setGender(e.value)
   }
+  const generateRandomSchool=()=>{
+
+  }
   
   
   const photoUpload=(e)=>{
@@ -109,8 +112,8 @@ console.log(gender)
           <div className="box">
           <input type="checkbox"></input>
             <label>School</label>
-            <input type="text" onChange={handleInputSchool}></input>
-            <button>Random School</button>
+            <input type="text" value={school} onChange={handleInputSchool}></input>
+            <button onClick={generateRandomSchool}>Random School</button>
             <label>Specialization</label>
             <input type="text" onChange={handleInputStream}></input>
             <button>Random Specialization</button>
