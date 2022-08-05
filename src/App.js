@@ -10,7 +10,7 @@ function App() {
   const[age,setAge]=useState("")
   const[occupation,setOccupation]=useState("");
   const[religion,setReligion]=useState("")
-  const[meeting,setMeeting]=useState("");
+  const[meeting,setMeeting]=useState("just conversation");
   const[image,setimage]=useState("");
   const [gender,setGender]=useState("true")
   const handleInputName = (e) => {
@@ -130,10 +130,10 @@ console.log(gender)
           <div className="box">
           <input type="checkbox"></input>
             <label>meeting reason</label>
-            <textarea rows="5" cols="20" onChange={handleMeeting}></textarea>
-            <button>For peace</button>
-            <button>For personal reason</button>
-            <button>For prayer</button>
+            <textarea rows="5" cols="20" value={meeting} onChange={handleMeeting}></textarea>
+            <button onClick={()=>setMeeting("for peace of mind")}>For peace</button>
+            <button onClick={()=>setMeeting("for personal reason")}>For personal reason</button>
+            <button onClick={()=>setMeeting("for payer to fill energetic ")}>For prayer</button>
             
             
 
