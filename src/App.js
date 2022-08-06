@@ -89,6 +89,7 @@ console.log(gender)
           <label>Name</label>
           <input
             type="text"
+            value={name}
             placeholder="Enter name"
             onChange={handleInputName}
           />
@@ -104,7 +105,7 @@ console.log(gender)
           <div className="box">
           <input type="checkbox"></input>
             <label>Location</label>
-            <input type="text" onChange={handleInputLocation}></input>
+            <input type="text" value={location} onChange={handleInputLocation}></input>
             <button>Random Location</button>
             
 
@@ -115,7 +116,8 @@ console.log(gender)
             <input type="text" value={school} onChange={handleInputSchool}></input>
             <button onClick={generateRandomSchool}>Random School</button>
             <label>Specialization</label>
-            <input type="text" onChange={handleInputStream}></input>
+            <input type="text" value={stream}
+             onChange={handleInputStream}></input>
             <button>Random Specialization</button>
             
 
