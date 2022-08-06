@@ -140,11 +140,11 @@ console.log(gender)
           </div>
           <div className="box">
           <input type="checkbox"></input>
-            <label>meeting reason</label>
-            <textarea rows="5" cols="20" value={meeting} onChange={handleMeeting}></textarea>
-            <button onClick={()=>setMeeting("for peace of mind")}>For peace</button>
-            <button onClick={()=>setMeeting("for personal reason")}>For personal reason</button>
-            <button onClick={()=>setMeeting("for payer to fill energetic ")}>For prayer</button>
+            <label style={{verticalAlign:"middle",margin:"3px",marginBottom:"6px",padding:"0",color:"#222"}}>meeting reason</label>
+            <textarea  className="textarea" rows="5" cols="20" value={meeting} onChange={handleMeeting}></textarea>
+            <button className="selectbutton" onClick={()=>setMeeting("for peace of mind")}>For peace</button>
+            <button className="selectbutton" onClick={()=>setMeeting("for personal reason")}>For personal reason</button>
+            <button  className="selectbutton" onClick={()=>setMeeting("for payer to fill energetic ")}>For prayer</button>
             
             
 
