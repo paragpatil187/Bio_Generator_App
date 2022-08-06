@@ -4,13 +4,13 @@ import axios from "axios"
 import "./App.css";
 
 function App() {
-  const [name, setName] = useState("");
-  const [location, setLocation] = useState("");
-  const [stream, setStream] = useState("");
-  const [school, setSchool] = useState("");
+  const [name, setName] = useState("Parag");
+  const [location, setLocation] = useState("vasheni");
+  const [stream, setStream] = useState("Engineering");
+  const [school, setSchool] = useState("GMVIT");
   const[age,setAge]=useState("")
-  const[occupation,setOccupation]=useState("");
-  const[religion,setReligion]=useState("")
+  const[occupation,setOccupation]=useState("Engineer");
+  const[religion,setReligion]=useState("Hindu")
   const[meeting,setMeeting]=useState("just conversation");
   const[image,setimage]=useState("");
   const [gender,setGender]=useState("true");
@@ -123,7 +123,7 @@ console.log(gender)
           <div className="box">
           <input type="checkbox"></input>
             <label>Occupation</label>
-            <input type="text" onChange={handleOccupation}></input>
+            <input type="text" value={occupation} onChange={handleOccupation}></input>
             <button>Random Occupation</button>
             
 
@@ -131,7 +131,7 @@ console.log(gender)
           <div className="box">
           <input type="checkbox"></input>
             <label>Religious background</label>
-            <textarea rows="5" cols="20" onChange={handleReligion}></textarea>
+            <textarea rows="5" cols="20" value={religion} onChange={handleReligion}></textarea>
             <button>Random religion</button>
             
 
@@ -170,7 +170,7 @@ console.log(gender)
           </div>
           
           <div className="box">
-            {name}  is from the {location}.{{gender}? "He":"She"} is studying {stream} at {school}.his occupation is {occupation}
+            {name}  is from the {location}.{{gender}? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
             his religion is {religion} He meet you for {meeting}
 
           </div>
