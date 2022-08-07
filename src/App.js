@@ -12,7 +12,7 @@ function App() {
   const[occupation,setOccupation]=useState("Engineer");
   const[religion,setReligion]=useState("Hindu")
   const[meeting,setMeeting]=useState("just conversation");
-  const[image,setimage]=useState("");
+  const[image,setimage]=useState("./logo192.png");
   const [gender,setGender]=useState("true");
   const [to,setTo]=useState("");
   const[from,setForm]=useState("");
@@ -49,6 +49,9 @@ function App() {
     setGender(e.value)
   }
   const generateRandomSchool=()=>{
+    let schoolArray=["SCSMV","sant tukaram school","rayat school","GMVIT"]
+    setSchool(schoolArray[Math.floor(Math.random()*4)])
+    console.log()
 
   }
   
