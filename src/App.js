@@ -54,6 +54,41 @@ function App() {
     console.log()
 
   }
+  const generateRandomName=()=>{
+    let schoolArray=["Parag","Sattya","Deva","Rupesh"]
+    setName(schoolArray[Math.floor(Math.random()*4)])
+    
+
+  }
+  
+  const generateRandomSpecialization=()=>{
+    let schoolArray=["Science","Arts","commerce","Socialscience"]
+    setStream(schoolArray[Math.floor(Math.random()*4)])
+    
+
+  }
+  
+  const generateRandomLocation=()=>{
+    let schoolArray=["Pune","Mumbai","Nagpur","Raigad"]
+    setLocation(schoolArray[Math.floor(Math.random()*4)])
+    console.log()
+
+  }
+  
+  const generateRandomOccupation=()=>{
+    let OccuptionArray=["Engineer","Developer","businessman","Politacian"]
+    setOccupation(OccuptionArray[Math.floor(Math.random()*4)])
+    console.log()
+
+  }
+  const generateRandomReligion=()=>{
+    let religionArray=["Hindu","sikh","jain","Buddhist"]
+    setReligion(religionArray[Math.floor(Math.random()*4)])
+    console.log()
+
+  }
+  
+  
   
   
   const photoUpload=(e)=>{
@@ -102,14 +137,14 @@ console.log(gender)
             <option value="true">Male</option>
             <option value="false">Female</option>
           </select>
-          <button>Random name</button>
+          <button onClick={generateRandomName}>Random name</button>
 
           </div>
           <div className="box">
           <input type="checkbox"></input>
             <label>Location</label>
             <input type="text" value={location} onChange={handleInputLocation}></input>
-            <button>Random Location</button>
+            <button onClick={generateRandomLocation}>Random Location</button>
             
 
           </div>
@@ -121,7 +156,7 @@ console.log(gender)
             <label>Specialization</label>
             <input type="text" value={stream}
              onChange={handleInputStream}></input>
-            <button>Random Specialization</button>
+            <button onClick={generateRandomSpecialization}>Random Specialization</button>
             
 
           </div>
@@ -129,7 +164,7 @@ console.log(gender)
           <input type="checkbox"></input>
             <label>Occupation</label>
             <input type="text" value={occupation} onChange={handleOccupation}></input>
-            <button>Random Occupation</button>
+            <button onClick={generateRandomOccupation}>Random Occupation</button>
             
 
           </div>
@@ -137,7 +172,7 @@ console.log(gender)
           <input type="checkbox"></input>
             <label>Religious background</label>
             <textarea rows="5" cols="20" value={religion} onChange={handleReligion}></textarea>
-            <button>Random religion</button>
+            <button onClick={generateRandomReligion}>Random religion</button>
             
 
           </div>
