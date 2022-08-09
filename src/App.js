@@ -13,7 +13,7 @@ function App() {
   const[religion,setReligion]=useState("Hindu")
   const[meeting,setMeeting]=useState("just conversation");
   const[image,setimage]=useState("./logo192.png");
-  const [gender,setGender]=useState("true");
+  const [gender,setGender]=useState("male");
   const [to,setTo]=useState("");
   const[from,setForm]=useState("");
   const[output,setOutput]=useState("");
@@ -46,7 +46,7 @@ function App() {
     setMeeting(e.target.value)
   }
   const handleGender=(e)=>{
-    setGender(e.value)
+    setGender(e.target.value)
   }
   const generateRandomSchool=()=>{
     let schoolArray=["SCSMV","sant tukaram school","rayat school","GMVIT"]
@@ -132,10 +132,10 @@ console.log(gender)
             onChange={handleInputName}
           />
           <label>Gender</label>
-          <select onChange={handleGender}
+          <select onChange={(e)=>handleGender(e)}
           >
-            <option value="true">Male</option>
-            <option value="false">Female</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
           <button onClick={generateRandomName}>Random name</button>
 
