@@ -210,8 +210,8 @@ console.log(gender)
           </div>
           
           <div className="box">
-            {name}  is from the {location}.{{gender}? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
-            his religion is {religion} He meet you for {meeting}
+            {name}  is from the {location}.{gender=="male"? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
+            {gender=="male"? "his":"her"} religion is {religion} {gender=="male"? "He":"She"} meet you for {meeting}
 
           </div>
 
