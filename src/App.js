@@ -18,6 +18,7 @@ function App() {
   const[from,setForm]=useState("");
   const[output,setOutput]=useState("");
   const [isChecked, setIsChecked] = useState(true);
+  const [isCheckedLocation, setIsCheckedLocation] = useState(true);
   
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -25,6 +26,10 @@ function App() {
   const handleOnChange = () => {
     setIsChecked(!isChecked);
   };
+  const handleOnChangeLocation = () => {
+    setIsCheckedLocation(!isCheckedLocation);
+  };
+
 
   const handleInputLocation = (e) => {
     setLocation(e.target.value);
@@ -145,7 +150,12 @@ console.log(gender)
 
           </div>
           <div className="box">
-          <input type="checkbox"></input>
+          <input type="checkbox"
+          value="false"
+          checked={isCheckedLocation}
+          onChange={handleOnChangeLocation}
+          
+          ></input>
             <label>Location</label>
             <input type="text" value={location} onChange={handleInputLocation}></input>
             <button onClick={generateRandomLocation}>Random Location</button>
@@ -217,7 +227,7 @@ console.log(gender)
           </div>
           
           <div className="box">
-            {name}  is from the {location}.{gender=="male"? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
+            {name} {isCheckedLocation ? `is from the ${location}` : null} .{gender=="male"? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
             {gender=="male"? "his":"her"} religion is {religion} {gender=="male"? "He":"She"}. {isChecked ? `meet you for ${meeting}` : null} 
 
           </div>
