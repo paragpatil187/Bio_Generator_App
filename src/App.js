@@ -17,9 +17,13 @@ function App() {
   const [to,setTo]=useState("");
   const[from,setForm]=useState("");
   const[output,setOutput]=useState("");
+  const [isChecked, setIsChecked] = useState(true);
   
   const handleInputName = (e) => {
     setName(e.target.value);
+  };
+  const handleOnChange = () => {
+    setIsChecked(!isChecked);
   };
 
   const handleInputLocation = (e) => {
@@ -177,7 +181,10 @@ console.log(gender)
 
           </div>
           <div className="box">
-          <input type="checkbox"></input>
+          <input type="checkbox" value="false"
+          checked={isChecked}
+          onChange={handleOnChange}
+          ></input>
             <label style={{verticalAlign:"middle",margin:"3px",marginBottom:"6px",padding:"0",color:"#222"}}>meeting reason</label>
             <textarea  className="textarea" rows="5" cols="20" value={meeting} onChange={handleMeeting}></textarea>
             <button className="selectbutton" onClick={()=>setMeeting("for peace of mind")}>For peace</button>
@@ -211,7 +218,7 @@ console.log(gender)
           
           <div className="box">
             {name}  is from the {location}.{gender=="male"? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
-            {gender=="male"? "his":"her"} religion is {religion} {gender=="male"? "He":"She"} meet you for {meeting}
+            {gender=="male"? "his":"her"} religion is {religion} {gender=="male"? "He":"She"}. {isChecked ? `meet you for ${meeting}` : null} 
 
           </div>
 
