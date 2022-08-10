@@ -19,6 +19,7 @@ function App() {
   const[output,setOutput]=useState("");
   const [isChecked, setIsChecked] = useState(true);
   const [isCheckedLocation, setIsCheckedLocation] = useState(true);
+  const[isCheckedOccuption,setIsCheckedoccuption]=useState(true)
   
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -28,6 +29,9 @@ function App() {
   };
   const handleOnChangeLocation = () => {
     setIsCheckedLocation(!isCheckedLocation);
+  };
+  const handleOnChangeOccuption = () => {
+    setIsCheckedoccuption(!isCheckedOccuption);
   };
 
 
@@ -175,7 +179,11 @@ console.log(gender)
 
           </div>
           <div className="box">
-          <input type="checkbox"></input>
+          <input type="checkbox"
+           value="false"
+           checked={isCheckedOccuption}
+           onChange={handleOnChangeOccuption}
+           ></input>
             <label>Occupation</label>
             <input type="text" value={occupation} onChange={handleOccupation}></input>
             <button onClick={generateRandomOccupation}>Random Occupation</button>
@@ -227,8 +235,8 @@ console.log(gender)
           </div>
           
           <div className="box">
-            {name} {isCheckedLocation ? `is from the ${location}` : null} .{gender=="male"? "He":"She"} is studying {stream} at {school}.his occupation is {occupation} 
-            {gender=="male"? "his":"her"} religion is {religion} {gender=="male"? "He":"She"}. {isChecked ? `meet you for ${meeting}` : null} 
+            {name} {isCheckedLocation ? `is from the ${location}` : null} .{gender=="male"? "He":"She"} is studying {stream} at {school}.{isCheckedOccuption ? `his occupation is ${occupation}` : null}   
+             {gender=="male"? " his":"her"} religion is {religion} {gender=="male"? "He":"She"}. {isChecked ? `meet you for ${meeting}` : null} 
 
           </div>
 
