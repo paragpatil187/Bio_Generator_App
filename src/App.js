@@ -20,6 +20,7 @@ function App() {
   const [isChecked, setIsChecked] = useState(true);
   const [isCheckedLocation, setIsCheckedLocation] = useState(true);
   const[isCheckedOccuption,setIsCheckedoccuption]=useState(true)
+  const[isCheckedReligion,setIsCheckedReligion]=useState(true)
   
   const handleInputName = (e) => {
     setName(e.target.value);
@@ -27,6 +28,9 @@ function App() {
   const handleOnChange = () => {
     setIsChecked(!isChecked);
   };
+  const handleOnChangeReligion=()=>{
+    setIsCheckedReligion(!isCheckedReligion)
+  }
   const handleOnChangeLocation = () => {
     setIsCheckedLocation(!isCheckedLocation);
   };
@@ -191,7 +195,11 @@ console.log(gender)
 
           </div>
           <div className="box">
-          <input type="checkbox"></input>
+          <input type="checkbox"
+          value="false"
+          checked={isCheckedReligion}
+          onChange={handleOnChangeReligion}
+          ></input>
             <label>Religious background</label>
             <textarea rows="5" cols="20" value={religion} onChange={handleReligion}></textarea>
             <button onClick={generateRandomReligion}>Random religion</button>
