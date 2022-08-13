@@ -12,7 +12,7 @@ function App() {
   const[occupation,setOccupation]=useState("Engineer");
   const[religion,setReligion]=useState("Hindu")
   const[meeting,setMeeting]=useState("just conversation");
-  const[image,setimage]=useState("./logo192.png");
+  const[image,setimage]=useState("./images.png");
   const [gender,setGender]=useState("male");
   const [to,setTo]=useState("");
   const[from,setForm]=useState("");
