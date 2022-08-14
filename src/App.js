@@ -138,8 +138,7 @@ console.log(gender)
           
           <h2 className="box">Options</h2>
           <div className="box">
-            <input type="checkbox">
-             </input>
+           
             <label>Profile photo</label>
           <input type="file" onChange={photoUpload}></input>
           </div>
@@ -254,8 +253,8 @@ console.log(gender)
           </div>
           
           <div className="box">
-            {name} {isCheckedLocation ? `is from the ${location}` : null}  {isCheckedSchool?`${gender=="male"? "He":"She"} is studying ${stream} at ${school}`:null}.{isCheckedOccuption ? `his occupation is ${occupation}` : null}   
-            {isCheckedReligion ? `${gender=="male"? " his":"her"} religion is ${religion}` : null}   {gender=="male"? "He":"She"} {isChecked ? `meet you for ${meeting}` : null} 
+            {name} {isCheckedLocation ? `is from the ${location}` : null}  {isCheckedSchool?`${gender=="male"? "He":"She"} is studying ${stream} at ${school}`:null}.{isCheckedOccuption ? `${gender=="male"? " His":" Her"} occupation is ${occupation}` : null}   
+            {isCheckedReligion ? `${gender=="male"? " his":" her"} religion is ${religion}` : null}   {gender=="male"? "He":"She"} {isChecked ? `meet you for ${meeting}` : null} 
 
           </div>
 
