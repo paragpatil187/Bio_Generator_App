@@ -254,7 +254,7 @@ console.log(gender)
           
           <div className="box">
             {name} {isCheckedLocation ? `is from the ${location}` : null}  {isCheckedSchool?`${gender=="male"? "He":"She"} is studying ${stream} at ${school}`:null}.{isCheckedOccuption ? `${gender=="male"? " His":" Her"} occupation is ${occupation}` : null}   
-            {isCheckedReligion ? `${gender=="male"? " his":" her"} religion is ${religion}` : null}   {gender=="male"? "He":"She"} {isChecked ? `meet you for ${meeting}` : null} 
+            {isCheckedReligion ? `${gender=="male"? " His":" Her"} religion is ${religion}` : null}   {gender=="male"? "He":"She"} {isChecked ? `meet you for ${meeting}` : null} 
 
           </div>
 
