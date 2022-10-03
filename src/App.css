@@ -75,3 +75,7 @@ margin: 5px;
 border: 1px solid;
 transition: .3s;
 }
+input{
+  height:20px;
+  background-color: aliceblue;
+}
